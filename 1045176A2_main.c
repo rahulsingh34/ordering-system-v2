@@ -11,8 +11,8 @@ int main() {
     int itemSelection = -1;
 
     //Receipt variables
-    char* receiptItems[] = {};
-    float receiptPrices[] = {};
+    char* receiptItems[10];
+    float receiptPrices[10];
 
     //Menu name variables
     char* menuNames[] = {"Main Menu:", "Side Menu", "Drink Menu", "Desserts:"};
@@ -48,15 +48,31 @@ int main() {
         
         if (menuSelection == 1) {
             itemSelection = printMenu(5, mainMenuItems, mainMenuPrices, menuNames[0]);
+            receiptItems[itemCount] = mainMenuItems[itemSelection];
+            receiptPrices[itemCount] = mainMenuPrices[itemSelection];
+            itemCount++;
+            itemSelection = -1;
         }
         else if (menuSelection == 2) {
-            printf("seclected");
+            itemSelection = printMenu(3, sideMenuItems, sideMenuPrices, menuNames[1]);
+            receiptItems[itemCount] = sideMenuItems[itemSelection];
+            receiptPrices[itemCount] = sideMenuPrices[itemSelection];
+            itemCount++;
+            itemSelection = -1;
         }
         else if (menuSelection == 3) {
-            printf("seclected");
+            itemSelection = printMenu(4, drinkMenuItems, drinkMenuPrices, menuNames[2]);
+            receiptItems[itemCount] = drinkMenuItems[itemSelection];
+            receiptPrices[itemCount] = drinkMenuPrices[itemSelection];
+            itemCount++;
+            itemSelection = -1;
         }
         else if (menuSelection == 4) {
-            printf("seclected");
+            itemSelection = printMenu(3, dessertMenuItems, dessertMenuPrices, menuNames[3]);
+            receiptItems[itemCount] = dessertMenuItems[itemSelection];
+            receiptPrices[itemCount] = dessertMenuPrices[itemSelection];
+            itemCount++;
+            itemSelection = -1;
         }
     }
 
