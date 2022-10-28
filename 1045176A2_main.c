@@ -14,6 +14,9 @@ int main() {
     char* receiptItems[] = {};
     float receiptPrices[] = {};
 
+    //Select menu variables
+    char* menuNames[] = {'Main Menu', 'Sides Menu', 'Drinks Menu', 'Desserts Menu', 'Checkout'};
+
     //Main menu variables
     char* mainMenuItems[] = {'Cheeseburger', 'Double Cheeseburger', 'Hotdog', 'BLT Sandwich', 'Chicken Burger'};
     float mainMenuPrices[] = {10.99, 12,99, 8.99, 7.99, 7.99};
