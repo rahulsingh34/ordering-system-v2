@@ -85,9 +85,16 @@ int main() {
         }
     }
 
-    printReceipt(receiptItems, receiptPrices, itemCount, subtotal);
-
-    printf("\nEnjoy your SoCSBurger meal - have a nice day!\n\n");
+    if (itemCount != 0) {
+        for (int i = 0; i < itemCount; i++) {
+        subtotal += receiptPrices[i++];
+        }
+        printReceipt(receiptItems, receiptPrices, itemCount, subtotal);
+        printf("\nEnjoy your SoCSBurger meal - have a nice day!\n\n");
+    }
+    else {
+        printf("No selections on the menu. We are looking forward to your next visit - have a nice day!\n\n"); 
+    }
 
     return 0;
 }

@@ -12,7 +12,7 @@ int printMenu(int itemCount, char items[][50], float prices[], char menuName[]) 
     int choice = -1;
 
     printf("%s\n\n", menuName);
-    for (int i=0; i < itemCount; i++) {
+    for (int i = 0; i < itemCount; i++) {
         printf("%d. ", i+1);
         printf("%s", items[i]);
         for (int j = 0; j < (characters - strlen(items[i])); j++) {
@@ -63,7 +63,7 @@ int selectMenu() {
 }
 
 /*
-* TODO
+This funct
 */
 void printReceipt(char orderItems[][50], float orderPrices[], int orderCount, float subtotal) {
     int characters = 27;
