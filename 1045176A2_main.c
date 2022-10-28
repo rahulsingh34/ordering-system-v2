@@ -18,6 +18,9 @@ int main() {
 
     //Select menu variables
     char* menuNames[] = {"Main Menu", "Sides Menu", "Drinks Menu", "Desserts Menu", "Checkout"};
+    
+    //Actual menu name variables
+    char* actualMenuNames[] = {"Main Menu:", "Side Menu", "Drink Menu", "Desserts:"};
 
     //Main menu variables
     char* mainMenuItems[] = {"Cheeseburger", "Double Cheeseburger", "Hotdog", "BLT Sandwich", "Chicken Burger"};
@@ -37,11 +40,33 @@ int main() {
     
     printf("Welcome to SoCSBurger!\n\n");
 
-    while (itemCount != - 1) {
+    while (menuSelection != 5) {
+
         menuSelection = selectMenu(itemCount);
+
+        while (menuSelection < 1 || menuSelection > 5) {
+                printf("Invaild input, try again...\n");
+                printf("Enter your choice: ");
+                scanf("%d", &menuSelection);
+                printf("\n");
+        }
+        
+        if (menuSelection == 1) {
+            printf("seclected");
+        }
+        else if (menuSelection == 2) {
+            printf("seclected");
+        }
+        else if (menuSelection == 3) {
+            printf("seclected");
+        }
+        else if (menuSelection == 4) {
+            printf("seclected");
+        }
     }
 
     printf("\nEnjoy your SoCSBurger meal - have a nice day!\n\n");
+
     return 0;
 }
 
@@ -49,11 +74,11 @@ int selectMenu(int itemCount) {
     int menuSelection = -1;
 
     printf("Select Menu:\n");
-    printf("1. Main Menu:\n");
-    printf("2. Sides Menu:\n");
-    printf("3. Drinks Menu:\n");
-    printf("4. Desserts Menu:\n");
-    printf("5. Checkout:\n\n");
+    printf("1. Main Menu\n");
+    printf("2. Sides Menu\n");
+    printf("3. Drinks Menu\n");
+    printf("4. Desserts Menu\n");
+    printf("5. Checkout\n\n");
     printf("Enter your choice: ");
 
     scanf("%d", &menuSelection);
