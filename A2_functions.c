@@ -3,8 +3,9 @@
 #include <string.h>
 
 /*
-* TODO
-* Write function comment here
+* This function takes in the number of items in the menu, the array of menu item names, the array of each item's price, and the menu name
+* The function will print each menu item and its price, dynamically formatting each row
+* The function will return the index of the menu item chosen
 */
 int printMenu(int itemCount, char items[][50], float prices[], char menuName[]) {
     int characters = 27;
@@ -37,12 +38,12 @@ int printMenu(int itemCount, char items[][50], float prices[], char menuName[]) 
 
     printf("%s Selected!\n\n", items[choice]);
     
-    return choice; // TODO - this needs to return the index of the selected menu item.
+    return choice;
 }
 
 /*
-* TODO
-* Write other functions and function comments here
+* This function will print the Select menu and provide the checkout prompt if item count is 10
+* The function will return the number of the menu selection chosen
 */
 int selectMenu(int itemCount) {
     int menuSelection = -1;
