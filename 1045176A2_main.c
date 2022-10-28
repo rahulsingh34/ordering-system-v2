@@ -3,6 +3,8 @@
 #include <string.h>
 #include "A2_functions.h"
 
+int selectMenu();
+
 int main() {
 
     //Count variables
@@ -93,7 +95,7 @@ int main() {
     //If itemCount is not 0, calculate totals and show receipt, else print goodbye 
     if (itemCount != 0) {
         for (int i = 0; i < itemCount; i++) {
-        subtotal += receiptPrices[i++];
+            subtotal += receiptPrices[i++];
         }
         printReceipt(receiptItems, receiptPrices, itemCount, subtotal);
         printf("\nEnjoy your SoCSBurger meal - have a nice day!\n\n");
@@ -103,5 +105,26 @@ int main() {
     }
 
     return 0;
+}
+
+/*
+* This function will print the Select menu 
+* The function will return the number of the menu selection chosen by the user
+*/
+int selectMenu() {
+    int menuSelection = -1;
+
+    printf("Select Menu:\n");
+    printf("1. Main Menu\n");
+    printf("2. Sides Menu\n");
+    printf("3. Drinks Menu\n");
+    printf("4. Desserts Menu\n");
+    printf("5. Checkout\n\n");
+    printf("Enter your choice: ");
+
+    scanf("%d", &menuSelection);
+    printf("\n");
+
+    return menuSelection;
 }
 

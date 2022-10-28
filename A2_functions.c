@@ -42,33 +42,15 @@ int printMenu(int itemCount, char items[][50], float prices[], char menuName[]) 
 }
 
 /*
-* This function will print the Select menu 
-* The function will return the number of the menu selection chosen by the user
-*/
-int selectMenu() {
-    int menuSelection = -1;
-
-    printf("Select Menu:\n");
-    printf("1. Main Menu\n");
-    printf("2. Sides Menu\n");
-    printf("3. Drinks Menu\n");
-    printf("4. Desserts Menu\n");
-    printf("5. Checkout\n\n");
-    printf("Enter your choice: ");
-
-    scanf("%d", &menuSelection);
-    printf("\n");
-
-    return menuSelection;
-}
-
-/*
 * This function takes the array of ordered items, an array of their prices, the number of items and the subtotal
 * It will dynamically size and print the receipt based on the items
 * It will return nothing but call the computeSubtotal function
 */
 void printReceipt(char orderItems[][50], float orderPrices[], int orderCount, float subtotal) {
     int characters = 27;
+
+    printf("Thank you for your order! Here is your receipt:\n\n");
+    printf("Items:\n");
 
     for (int i = 0; i < orderCount; i++){
         printf("%s", orderItems[i]);
@@ -78,4 +60,6 @@ void printReceipt(char orderItems[][50], float orderPrices[], int orderCount, fl
         printf("$%.2f", orderPrices[i]);
         printf("\n");
     }
+
+
 }
