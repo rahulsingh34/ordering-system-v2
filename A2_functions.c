@@ -1,17 +1,43 @@
 #include "A2_functions.h"
 #include <stdio.h>
+#include <string.h>
 
 /*
 * TODO
 * Write function comment here
 */
 int printMenu(int itemCount, char items[][50], float prices[], char menuName[]) {
-    /*
-    * TODO
-    * Write function body here
-    */
-  
-    return -1; // TODO - this needs to return the index of the selected menu item.
+    int characters = 27;
+    int choice = -1;
+
+    printf("%s\n\n", menuName);
+    for (int i=0; i < itemCount; i++) {
+        printf("%d. ", i+1);
+        printf("%s", items[i]);
+        for (int j = 0; j < (characters - strlen(items[i])); j++) {
+            printf(" ");
+        }
+        printf("%.2f", prices[i]);
+        printf("\n");
+    }
+
+    printf("\nEnter your choice: ");
+    scanf("%d", &choice);
+    
+    while (choice < 1 || choice > itemCount)
+    {
+        printf("\nInvalid input, try again... \n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+    }
+
+    printf("\n");
+
+    choice = choice - 1;
+
+    printf("%s Selected!\n\n", items[choice]);
+    
+    return choice; // TODO - this needs to return the index of the selected menu item.
 }
 
 /*
