@@ -5,8 +5,14 @@
 
 int main() {
 
-    //Item count variable
+    //Count variables
     int itemCount = 0;
+    int menuSelection = -1;
+    int itemSelection = -1;
+
+    //Receipt variables
+    char* receiptItems[] = {};
+    float receiptPrices[] = {};
 
     //Main menu variables
     char* mainMenuItems[] = {'Cheeseburger', 'Double Cheeseburger', 'Hotdog', 'BLT Sandwich', 'Chicken Burger'};
@@ -24,7 +30,9 @@ int main() {
     char* dessertMenuItems[] = {'Doughnut', 'Choco Chip Cookie', 'Cinnamon Roll'};
     float dessertMenuPrices[] = {2.49, 1.49, 2.99};
     
-    printf("Welcome to SoCSBurger!");
+    printf("Welcome to SoCSBurger!\n\n");
+
+    
 
     printf("\nEnjoy your SoCSBurger meal - have a nice day!\n\n");
     return 0;
