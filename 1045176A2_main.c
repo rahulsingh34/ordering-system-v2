@@ -9,9 +9,10 @@ int main() {
     int itemCount = 0;
     int menuSelection = -1;
     int itemSelection = -1;
+    float subtotal = 0.00;
 
     //Receipt variables
-    char* receiptItems[10];
+    char receiptItems[10][50];
     float receiptPrices[10];
 
     //Menu name variables
@@ -48,33 +49,35 @@ int main() {
         
         if (menuSelection == 1) {
             itemSelection = printMenu(5, mainMenuItems, mainMenuPrices, menuNames[0]);
-            receiptItems[itemCount] = mainMenuItems[itemSelection];
+            strcpy(receiptItems[itemCount], mainMenuItems[itemSelection]);
             receiptPrices[itemCount] = mainMenuPrices[itemSelection];
             itemCount++;
             itemSelection = -1;
         }
         else if (menuSelection == 2) {
             itemSelection = printMenu(3, sideMenuItems, sideMenuPrices, menuNames[1]);
-            receiptItems[itemCount] = sideMenuItems[itemSelection];
+            strcpy(receiptItems[itemCount], sideMenuItems[itemSelection]);
             receiptPrices[itemCount] = sideMenuPrices[itemSelection];
             itemCount++;
             itemSelection = -1;
         }
         else if (menuSelection == 3) {
             itemSelection = printMenu(4, drinkMenuItems, drinkMenuPrices, menuNames[2]);
-            receiptItems[itemCount] = drinkMenuItems[itemSelection];
+            strcpy(receiptItems[itemCount], drinkMenuItems[itemSelection]);
             receiptPrices[itemCount] = drinkMenuPrices[itemSelection];
             itemCount++;
             itemSelection = -1;
         }
         else if (menuSelection == 4) {
             itemSelection = printMenu(3, dessertMenuItems, dessertMenuPrices, menuNames[3]);
-            receiptItems[itemCount] = dessertMenuItems[itemSelection];
+            strcpy(receiptItems[itemCount], dessertMenuItems[itemSelection]);
             receiptPrices[itemCount] = dessertMenuPrices[itemSelection];
             itemCount++;
             itemSelection = -1;
         }
     }
+
+    printReceipt(receiptItems, receiptPrices, itemCount, subtotal);
 
     printf("\nEnjoy your SoCSBurger meal - have a nice day!\n\n");
 

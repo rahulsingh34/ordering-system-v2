@@ -67,3 +67,19 @@ int selectMenu(int itemCount) {
         return menuSelection;
     }
 }
+
+/*
+* TODO
+*/
+void printReceipt(char orderItems[][50], float orderPrices[], int orderCount, float subtotal) {
+    int characters = 27;
+
+    for (int i = 0; i < orderCount; i++){
+        printf("%s", orderItems[i]);
+        for (int j = 0; j < (characters - strlen(orderItems[i])); j++) {
+            printf(" ");
+        }
+        printf("$%.2f", orderPrices[i]);
+        printf("\n");
+    }
+}
