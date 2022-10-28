@@ -38,13 +38,21 @@ int main() {
 
     while (menuSelection != 5) {
 
-        menuSelection = selectMenu(itemCount);
+        menuSelection = selectMenu();
 
         while (menuSelection < 1 || menuSelection > 5) {
                 printf("Invaild input, try again...\n");
                 printf("Enter your choice: ");
                 scanf("%d", &menuSelection);
                 printf("\n");
+        }
+
+        while (itemCount == 10) {
+            printf("You have reached the maximum of 10 items. Please checkout.\n\n");
+            menuSelection = selectMenu();
+            if (menuSelection == 5) {
+                break;
+            }
         }
         
         if (menuSelection == 1) {

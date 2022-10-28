@@ -42,10 +42,10 @@ int printMenu(int itemCount, char items[][50], float prices[], char menuName[]) 
 }
 
 /*
-* This function will print the Select menu and provide the checkout prompt if item count is 10
+* This function will print the Select menu 
 * The function will return the number of the menu selection chosen
 */
-int selectMenu(int itemCount) {
+int selectMenu() {
     int menuSelection = -1;
 
     printf("Select Menu:\n");
@@ -59,13 +59,7 @@ int selectMenu(int itemCount) {
     scanf("%d", &menuSelection);
     printf("\n");
 
-    if(itemCount == 10) {
-        printf("You have reached the maximum of 10 items. Please checkout.\n\n");
-        return -1;
-    }
-    else {
-        return menuSelection;
-    }
+    return menuSelection;
 }
 
 /*
