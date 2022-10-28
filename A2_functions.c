@@ -5,7 +5,7 @@
 /*
 * This function takes in the number of items in the menu, the array of menu item names, the array of each item's price, and the menu name
 * The function will print each menu item and its price, dynamically formatting each row
-* The function will return the index of the menu item chosen
+* The function will return the index of the menu item chosen by the user
 */
 int printMenu(int itemCount, char items[][50], float prices[], char menuName[]) {
     int characters = 27;
@@ -43,7 +43,7 @@ int printMenu(int itemCount, char items[][50], float prices[], char menuName[]) 
 
 /*
 * This function will print the Select menu 
-* The function will return the number of the menu selection chosen
+* The function will return the number of the menu selection chosen by the user
 */
 int selectMenu() {
     int menuSelection = -1;
@@ -63,7 +63,9 @@ int selectMenu() {
 }
 
 /*
-This funct
+* This function takes the array of ordered items, an array of their prices, the number of items and the subtotal
+* It will dynamically size and print the receipt based on the items
+* It will return nothing but call the computeSubtotal function
 */
 void printReceipt(char orderItems[][50], float orderPrices[], int orderCount, float subtotal) {
     int characters = 27;

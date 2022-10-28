@@ -34,12 +34,15 @@ int main() {
     char dessertMenuItems[3][50] = {"Doughnut", "Choco Chip Cookie", "Cinnamon Roll"};
     float dessertMenuPrices[] = {2.49, 1.49, 2.99};
     
+    //Welcome
     printf("Welcome to SoCSBurger!\n\n");
 
+    //Continue to prompt selectio menu if checkout is not chosen
     while (menuSelection != 5) {
 
         menuSelection = selectMenu();
 
+        //Invalid input handling 
         while (menuSelection < 1 || menuSelection > 5) {
                 printf("Invaild input, try again...\n");
                 printf("Enter your choice: ");
@@ -47,6 +50,7 @@ int main() {
                 printf("\n");
         }
 
+        //Checkout prompt when item limit is reached
         while (itemCount == 10) {
             printf("You have reached the maximum of 10 items. Please checkout.\n\n");
             menuSelection = selectMenu();
@@ -55,6 +59,7 @@ int main() {
             }
         }
         
+        //Controller for the selected menus, show menu, copy selection to receipt, +1 to total items, reset
         if (menuSelection == 1) {
             itemSelection = printMenu(5, mainMenuItems, mainMenuPrices, menuNames[0]);
             strcpy(receiptItems[itemCount], mainMenuItems[itemSelection]);
@@ -85,6 +90,7 @@ int main() {
         }
     }
 
+    //If itemCount is not 0, calculate totals and show receipt, else print goodbye 
     if (itemCount != 0) {
         for (int i = 0; i < itemCount; i++) {
         subtotal += receiptPrices[i++];
