@@ -46,6 +46,7 @@ int main() {
 
         //Invalid input handling 
         while (menuSelection < 1 || menuSelection > 5) {
+                fflush(stdin);
                 printf("Invaild input, try again...\n");
                 printf("Enter your choice: ");
                 scanf("%d", &menuSelection);

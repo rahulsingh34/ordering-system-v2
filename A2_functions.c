@@ -60,6 +60,11 @@ void printReceipt(char orderItems[][50], float orderPrices[], int orderCount, fl
         printf("$%.2f", orderPrices[i]);
         printf("\n");
     }
+}
 
-
+/*
+* TODO
+*/
+float computeSubtotal(float orderPrices[], int orderCount) {
+    return 0;
 }
