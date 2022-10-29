@@ -1,3 +1,31 @@
+/***1045176A2_main.c***
+Student Name: Rahul Singh
+Id: rsingh20
+Due Date: October 7th 2022 at 11:59pm
+Course Name: CIS 1500
+***
+This file contains...
+Describe the program, functions, important variables, etc.
+***
+I have exclusive control over this submission via my password. By including this statement in this header comment, I certify that:
+1) I have read and understood the University policy on academic integrity;
+2) I have completed assigned video on academic integrity; and
+3) I assert that this work is my own. I have acknowledged any and all material (code, data, images, ideas or words) that I have used, whether directly quoted or paraphrased is my own work. Furthermore, I certify that this assignment was prepared by me specifically for this course.
+***
+The program should be compiled using the following flags:
+-std=c99
+-Wall
+Ex. compiling:
+gcc -std=c99 -Wall 1045176A2_main.c A2_functions.c -o A2
+OR
+gcc -std=c99 -Wall 1045176A2_main.c A2_functions.c
+***
+After compiling, the program should be run using one of the following commands:
+./A2
+OR
+./a.out
+***/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
