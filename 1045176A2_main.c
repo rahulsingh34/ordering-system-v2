@@ -96,28 +96,24 @@ int main() {
             strcpy(receiptItems[itemCount], mainMenuItems[itemSelection]);
             receiptPrices[itemCount] = mainMenuPrices[itemSelection];
             itemCount++;
-            itemSelection = -1;
         }
         else if (menuSelection == 2) {
             itemSelection = printMenu(3, sideMenuItems, sideMenuPrices, menuNames[1]);
             strcpy(receiptItems[itemCount], sideMenuItems[itemSelection]);
             receiptPrices[itemCount] = sideMenuPrices[itemSelection];
             itemCount++;
-            itemSelection = -1;
         }
         else if (menuSelection == 3) {
             itemSelection = printMenu(4, drinkMenuItems, drinkMenuPrices, menuNames[2]);
             strcpy(receiptItems[itemCount], drinkMenuItems[itemSelection]);
             receiptPrices[itemCount] = drinkMenuPrices[itemSelection];
             itemCount++;
-            itemSelection = -1;
         }
         else if (menuSelection == 4) {
             itemSelection = printMenu(3, dessertMenuItems, dessertMenuPrices, menuNames[3]);
             strcpy(receiptItems[itemCount], dessertMenuItems[itemSelection]);
             receiptPrices[itemCount] = dessertMenuPrices[itemSelection];
             itemCount++;
-            itemSelection = -1;
         }
     }
 
