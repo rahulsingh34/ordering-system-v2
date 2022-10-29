@@ -44,7 +44,8 @@ int printMenu(int itemCount, char items[][50], float prices[], char menuName[]) 
 /*
 * This function takes the array of ordered items, an array of their prices, the number of items and the subtotal
 * It will dynamically size and print the receipt based on the items
-* It will return nothing but call the computeSubtotal function
+* It calls the computeSubtotal function to calculate subtotal, taxes and the total
+* It will return nothing
 */
 void printReceipt(char orderItems[][50], float orderPrices[], int orderCount, float subtotal) {
     int characters = 27;
@@ -70,7 +71,7 @@ void printReceipt(char orderItems[][50], float orderPrices[], int orderCount, fl
 }
 
 /*
-* This functio will take in the array of order prices and the number of orders
+* This function will take in the array of order prices and the number of orders
 * It will return the final subtotal of all ordered items
 */
 float computeSubtotal(float orderPrices[], int orderCount) {
