@@ -93,7 +93,7 @@ int main() {
         }
     }
 
-    //If itemCount is not 0, calculate totals and show receipt, else print goodbye 
+    //If itemCount is not 0, show receipt, else print goodbye 
     if (itemCount != 0) {
         printReceipt(receiptItems, receiptPrices, itemCount, subtotal);
         printf("\nEnjoy your SoCSBurger meal - have a nice day!\n\n");

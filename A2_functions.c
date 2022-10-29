@@ -70,7 +70,8 @@ void printReceipt(char orderItems[][50], float orderPrices[], int orderCount, fl
 }
 
 /*
-* TODO
+* This functio will take in the array of order prices and the number of orders
+* It will return the final subtotal of all ordered items
 */
 float computeSubtotal(float orderPrices[], int orderCount) {
     float subtotal = 0.00;
