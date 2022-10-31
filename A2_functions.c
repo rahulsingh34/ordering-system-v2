@@ -27,6 +27,7 @@ int printMenu(int itemCount, char items[][50], float prices[], char menuName[]) 
     
     while (choice < 1 || choice > itemCount)
     {
+        fflush(stdin);
         printf("\nInvalid input, try again... \n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
