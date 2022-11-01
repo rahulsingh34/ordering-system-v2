@@ -64,11 +64,11 @@ void printReceipt(char orderItems[][50], float orderPrices[], int orderCount, fl
     }
 
     printf("\nSub-total:                 ");
-    printf("$%.2f\n", computeSubtotal(orderPrices, orderCount));
+    printf("$%.2f\n", subtotal);
     printf("Tax:                       ");
-    printf("$%.2f\n", 0.13 * computeSubtotal(orderPrices, orderCount));
+    printf("$%.2f\n", 0.13 * subtotal);
     printf("Total:                     ");
-    printf("$%.2f\n", 1.13 * computeSubtotal(orderPrices, orderCount));
+    printf("$%.2f\n", 1.13 * subtotal);
 }
 
 /*

@@ -39,7 +39,6 @@ int main() {
     int itemCount = 0;
     int menuSelection = -1;
     int itemSelection = -1;
-    float subtotal = 0.00;
 
     //Receipt variables
     char receiptItems[10][50];
@@ -119,7 +118,7 @@ int main() {
 
     //If itemCount is not 0, show receipt, else print goodbye 
     if (itemCount != 0) {
-        printReceipt(receiptItems, receiptPrices, itemCount, subtotal);
+        printReceipt(receiptItems, receiptPrices, itemCount, computeSubtotal(receiptPrices, itemCount));
         printf("\nEnjoy your SoCSBurger meal - have a nice day!\n\n");
     }
     else {
